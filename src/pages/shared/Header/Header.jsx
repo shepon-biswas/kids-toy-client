@@ -104,6 +104,9 @@ const Header = () => {
                   <li>
                     <Link to={'/addtoy'}>Add A Toy</Link>
                   </li>
+                  <li>
+                    <Link to={'/mytoys'}>My Toys</Link>
+                  </li>
                   </>
                 )
               }

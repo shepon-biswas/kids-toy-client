@@ -17,6 +17,7 @@ const AddToy = () => {
     const rating = form.rating.value;
     const quantity = form.quantity.value;
     const subCategory = selectValue;
+    const description = form.description.value;
 
     const toys = {
       name,
@@ -27,6 +28,7 @@ const AddToy = () => {
       rating,
       quantity,
       subCategory,
+      description
     };
     console.log(toys);
     // send to toys data to server
