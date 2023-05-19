@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 const Header = () => {
+  const { user, logOut } = useContext(AuthContext);
+  // console.log(user)
+
+  const handleLogOut = () => {
+    logOut()
+      .then()
+      .catch((error) => console.error(error));
+  };
+
   return (
     <>
       <div className="bg-[#FF55BB]">
@@ -60,11 +70,14 @@ const Header = () => {
             </div>
             {/* Navbar Start */}
             <div className="inline-flex items-center">
-                <img className="w-10 rounded-full  me-2" src="https://i.ibb.co/hWczT9S/pngtree-kids-logo-image-79551.jpg" alt="logo" />
-            <Link className=" text-white text-2xl font-bold">
-              Kids Toys With Education
-            </Link>
-
+              <img
+                className="w-10 rounded-full  me-2"
+                src="https://i.ibb.co/hWczT9S/pngtree-kids-logo-image-79551.jpg"
+                alt="logo"
+              />
+              <Link className=" text-white text-2xl font-bold">
+                Kids Toys With Education
+              </Link>
             </div>
           </div>
           <div className="navbar-center hidden lg:flex">
@@ -85,13 +98,43 @@ const Header = () => {
           </div>
           <div className="navbar-end">
             <ul className="text-white font-semibold text-lg">
-              <li className="me-4"><NavLink to={'/login'}>Login</NavLink></li>
+              {user ? (
+                <>
+                  <li>
+                    <NavLink
+                      onClick={handleLogOut}
+                      className={
+                        "font-semibold bg-white text-[#ff0099] px-4 py-2 rounded "
+                      }
+                    >
+                      {" "}
+                      Logout
+                    </NavLink>
+                  </li>
+                </>
+              ) : (
+                <li>
+                  <NavLink
+                    to={"/login"}
+                    className={
+                      "font-semibold bg-white text-[#ff0099] px-4 py-2 rounded "
+                    }
+                  >
+                    {" "}
+                    Login
+                  </NavLink>
+                </li>
+              )}
             </ul>
-            <div className="avatar">
-              <div className="w-10 rounded-full ring ring-[#ff0099] ring-offset-base-200 ring-offset-2">
-                <img src="https://images.pexels.com/photos/2869318/pexels-photo-2869318.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&dpr=1" />
-              </div>
-            </div>
+            {user && (
+              <>
+                <div className="avatar">
+                  <div className="w-10 ms-5 rounded-full cursor-pointer ring ring-[#ff0099] ring-offset-base-200 ring-offset-2">
+                    <img src={user?.photoURL} alt="user display image" title={user?.displayName} />
+                  </div>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>
