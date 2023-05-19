@@ -84,6 +84,9 @@ const Header = () => {
             </ul>
           </div>
           <div className="navbar-end">
+            <ul className="text-white font-semibold text-lg">
+              <li className="me-4"><NavLink to={'/login'}>Login</NavLink></li>
+            </ul>
             <div className="avatar">
               <div className="w-10 rounded-full ring ring-[#ff0099] ring-offset-base-200 ring-offset-2">
                 <img src="https://images.pexels.com/photos/2869318/pexels-photo-2869318.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&dpr=1" />
