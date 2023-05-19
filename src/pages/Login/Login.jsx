@@ -1,8 +1,26 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
+
+    const {googleSignIn} = useContext(AuthContext);
+
+
+// Google sign in
+const handleGoogleSignIn = ()=>
+googleSignIn()
+.then(result =>{
+    const user = result.user;
+    console.log(user)
+})
+.catch(err =>{
+    console.error(err)
+})
+
+
+
   return (
     <>
       <div className=" w-10/12 mx-auto grid grid-cols-2 items-center px-5 my-5">
@@ -61,7 +79,7 @@ const Login = () => {
           <div className="divider px-7">OR</div>
           <div className="px-7 my-5">
             <button
-              //   onClick={handleGoogleSignin}
+                onClick={handleGoogleSignIn}
               className="btn btn-outline text-[#ff0099] hover:bg-[#FF55BB] hover:border-none w-full mb-3"
             >
               <FaGoogle className="me-3"></FaGoogle> continue with Google

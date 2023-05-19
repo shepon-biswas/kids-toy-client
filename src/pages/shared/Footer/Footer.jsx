@@ -14,11 +14,11 @@ const Footer = () => {
                 alt="logo"
               />
               <Link className=" text-2xl font-bold text-[#ff0099]">
-                Kid Toys With Education
+                Kids Toys With Education
               </Link>
             </div>
             <p className="w-80">
-              Kid Toys With Education is educational toys seller based in Chicago.
+              Kids Toys With Education is educational toys seller based in Chicago.
               We provide varites of eductional toys as like math learning toys, science toys, engineerinf toys etc.
             </p>
           </div>

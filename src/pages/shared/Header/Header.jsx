@@ -62,7 +62,7 @@ const Header = () => {
             <div className="inline-flex items-center">
                 <img className="w-10 rounded-full  me-2" src="https://i.ibb.co/hWczT9S/pngtree-kids-logo-image-79551.jpg" alt="logo" />
             <Link className=" text-white text-2xl font-bold">
-              Kid Toys With Education
+              Kids Toys With Education
             </Link>
 
             </div>
