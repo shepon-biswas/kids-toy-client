@@ -1,9 +1,11 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Register = () => {
-    const {createNewUser} = useContext(AuthContext);
+    const {createNewUser, updateUserData} = useContext(AuthContext);
+    const [errorMessage, setErrorMessage] = useState("");
+    const [success, setSuccess] = useState("");
 
     const handleRegister = (event) => {
         event.preventDefault();
@@ -14,13 +16,36 @@ const Register = () => {
         const photo = form.photoUrl.value;
         // console.log( name, email, password, photo)}
 
+        // Validate Password field
+    if (!/(?=.*[A-Z])/.test(password)) {
+        setErrorMessage("Password: Please add at least one uppercase letter");
+        return;
+      } else if (!/(?=.*[0-9])/.test(password)) {
+        setErrorMessage("Password: Please add at least one number");
+        return;
+      } else if (password.length < 6) {
+        setErrorMessage("Password must be 6 characters or more");
+        return;
+      }
+
         createNewUser(email, password)
         .then((result)=>{
+            setErrorMessage("");
+        setSuccess("");
             const newUser = result.user;
             console.log(newUser)
+            // Update new user displayName & Photo URL
+            updateUserData(newUser, name, photo)
+            .then(()=>{
+                setSuccess("User has been created successfully!!!")
+                form.reset();
+            })
+            .catch((error) =>{
+                setErrorMessage(error.message)
+            })
         })
         .catch((error) =>{
-            console.error(error)
+            setErrorMessage(error.message)
         })
     }
 
@@ -36,7 +61,7 @@ const Register = () => {
             alt="Register image"
           />
         </div>
-        <div className=" card  max-w-sm shadow-2xl bg-base-100 w-10/12 mx-auto">
+        <div className=" card  max-w-md shadow-2xl bg-base-100 w-10/12 mx-auto">
           {/* Register Title */}
           <div className="text-center mt-3 px-7">
             <h4 className="text-2xl font-bold mb-2 text-[#ff0099]">Please Register</h4>
@@ -92,8 +117,8 @@ const Register = () => {
               />
             </div>
             {/* Success & Error Message Display Section */}
-            {/* <p className="text-green-600">{success}</p>
-            <p className="text-red-600">{errorMessage}</p> */}
+            <p className="text-green-600">{success}</p>
+            <p className="text-red-600">{errorMessage}</p>
             <div className="form-control ">
               <button className="btn bg-[#ff0099] border-none hover:bg-[#FF55BB] my-2">Register</button>
             </div>
