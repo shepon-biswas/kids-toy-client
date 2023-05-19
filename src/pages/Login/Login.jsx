@@ -1,11 +1,13 @@
-import React, { useContext } from "react";
+import { useContext, useState } from "react";
 import { FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
 
-    const {googleSignIn} = useContext(AuthContext);
+    const {googleSignIn, signInUser} = useContext(AuthContext);
+    const [errorMessage, setErrorMessage] = useState("");
+    const [success, setSuccess] = useState("");
 
 
 // Google sign in
@@ -19,6 +21,24 @@ googleSignIn()
     console.error(err)
 })
 
+// Handle sign in with email & password
+const handleSignIn = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(email, password);
+
+    signInUser(email, password)
+      .then((result) => {
+        setErrorMessage("");
+        const loggedUser = result.user;
+        form.reset();
+        setSuccess("Successfully Logged In!");
+
+      })
+      .catch((error) => setErrorMessage(error.message));
+  };
 
 
   return (
@@ -35,7 +55,7 @@ googleSignIn()
             <h4 className="text-2xl font-bold mb-2 text-[#ff0099] ">Please Login</h4>
             <hr />
           </div>
-          <form className="card-body">
+          <form onSubmit={handleSignIn} className="card-body">
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Your Email</span>
@@ -61,8 +81,8 @@ googleSignIn()
               />
             </div>
             {/* Display Success & Error Messages */}
-            {/* <p className="text-green-600">{success}</p>
-            <p className="text-red-600">{errorMessage}</p> */}
+            <p className="text-green-600">{success}</p>
+            <p className="text-red-600">{errorMessage}</p>
             <div className="form-control mt-6">
               <button className="btn bg-[#ff0099] border-none hover:bg-[#FF55BB]">Login</button>
             </div>
