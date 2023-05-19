@@ -97,7 +97,16 @@ const Header = () => {
             </ul>
           </div>
           <div className="navbar-end">
-            <ul className="text-white font-semibold text-lg">
+            <ul className="text-white font-semibold text-lg flex items-center space-x-4">
+              {
+                user && (
+                  <>
+                  <li>
+                    <Link to={'/addtoy'}>Add A Toy</Link>
+                  </li>
+                  </>
+                )
+              }
               {user ? (
                 <>
                   <li>
