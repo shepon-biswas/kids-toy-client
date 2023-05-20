@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { FaEye } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const AllToys = () => {
     const [searchText ,setSearchText] = useState();
@@ -96,10 +97,12 @@ const AllToys = () => {
                   <td>{toy.price}</td>
                   <td>{toy.quantity}</td>
                   <td>
+                    <Link to={`/toydetails/${toy._id}`}>
                     <button className="btn bg-[#ff0099] border-none">
                       {" "}
                       <FaEye className="me-3"></FaEye> View Details
                     </button>
+                    </Link>
                   </td>
                 </tr>
               ))}
