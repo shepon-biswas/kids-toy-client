@@ -1,7 +1,9 @@
-import React from 'react';
+
 import Slider from '../Slider/Slider';
 import ShopByCategory from '../../ShopByCategory/ShopByCategory';
 import Gallery from '../../Gallery/Gallery';
+import TestomonialVideo from '../../TestomonialVideo/TestomonialVideo';
+import TestomonialSlider from '../../TestomonialSlider/TestomonialSlider';
 
 const Home = () => {
     return (
@@ -9,6 +11,8 @@ const Home = () => {
             <Slider></Slider>
             <Gallery></Gallery>
             <ShopByCategory></ShopByCategory>
+            <TestomonialVideo></TestomonialVideo>
+            <TestomonialSlider></TestomonialSlider>
         </>
     );
 };
