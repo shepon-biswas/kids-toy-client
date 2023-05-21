@@ -145,7 +145,7 @@ const AddToy = () => {
               <input
                 required
                 name="price"
-                type="text"
+                type="number"
                 placeholder="Enter price..."
                 className="input input-bordered border-[#ff0099] w-full"
               />

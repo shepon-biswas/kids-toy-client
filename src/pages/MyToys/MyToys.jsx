@@ -10,7 +10,8 @@ const MyToys = () => {
         fetch(`http://localhost:5000/mytoys/${user?.email}`)
         .then(res => res.json())
         .then(data =>{
-            setToys(data);
+          const sortedData = data.sort((a, b) => b.price - a.price);
+            setToys(sortedData);
         })
     }, [user])
   return (
