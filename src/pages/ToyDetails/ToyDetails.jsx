@@ -5,6 +5,7 @@ import useTitle from "../../hooks/useTitle";
 const ToyDetails = () => {
   useTitle("Toy Details")
     const [toy] = useLoaderData();
+    console.log(toy)
   return (
     <>
       <div className=" w-10/12 mx-auto">
@@ -19,34 +20,34 @@ const ToyDetails = () => {
         <div className="grid grid-cols-6 items-center gap-x-3 my-10 rounded-md border border-[#ffcfec]">
           <div className="col-span-2">
             <img
-              src="https://i.ibb.co/9ZLfLdp/magna-tiles-educational-toys-for-kids1.jpg"
+              src={toy?.photo}
               alt="toys-image"
               className="rounded-md shadow-md p-2"
             />
           </div>
           <div className="col-span-4 space-y-2 p-2">
             <h4 className="text-2xl font-bold">{toy?.name}</h4>
-            <p className="text-gray-700">{toy.description}</p>
+            <p className="text-gray-700">{toy?.description}</p>
             <div className="grid grid-cols-1">
               <span>
                 <strong>Seller Name: </strong>
-                {toy.sellerName}
+                {toy?.sellerName}
               </span>
               <span>
                 <strong>Seller Email: </strong>
-                {toy.sellerEmail}
+                {toy?.sellerEmail}
               </span>
               <span>
                 <strong>Quantity: </strong>
-                {toy.quantity}
+                {toy?.quantity}
               </span>
               <span>
                 <strong>Price: </strong>
-                {toy.price}
+                {toy?.price}
               </span>
               <span>
                 <strong>Rating: </strong>
-                {toy.rating}
+                {toy?.rating}
               </span>
             </div>
           </div>
