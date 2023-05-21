@@ -35,7 +35,7 @@ const Slider = () => {
             <div className=" relative rounded">
               <img
                 className="object-cover w-full h-[550px] rounded"
-                src="https://i.ibb.co/CBsMHNG/pexels-photo-8612921.jpg" alt="Slider-1"
+                src="https://i.ibb.co/nMsKYvh/slider1.jpg" alt="Slider-1"
               ></img>
               <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-b from-[#23232301] to-[#ff0099c5] rounded">
               <div className=" absolute bottom-10 left-[15%] text-center w-2/3 mx-auto text-white   ">
@@ -50,7 +50,7 @@ const Slider = () => {
             <div className=" relative rounded">
               <img
                 className="object-cover w-full h-[550px] rounded"
-                src="https://i.ibb.co/3dVbrjk/pexels-photo-8422249.jpg" alt="Slider-2"
+                src="https://i.ibb.co/8gCkSMH/slider2.jpg" alt="Slider-2"
               ></img>
               <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-b from-[#23232301] to-[#ff0099c5] rounded">
               <div className=" absolute bottom-10 left-[15%] text-center w-2/3 mx-auto text-white   ">
@@ -65,7 +65,7 @@ const Slider = () => {
             <div className=" relative rounded">
               <img
                 className="object-cover w-full h-[550px] rounded"
-                src="https://i.ibb.co/MMgxM7Q/pexels-photo-3661454.jpg" alt="Slider-3"
+                src="https://i.ibb.co/dbzNC8W/slider3.jpg" alt="Slider-3"
               ></img>
               <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-b from-[#23232301] to-[#ff0099c5] rounded">
               <div className=" absolute bottom-10 left-[15%] text-center w-2/3 mx-auto text-white   ">
@@ -80,7 +80,7 @@ const Slider = () => {
             <div className=" relative rounded">
               <img
                 className="object-cover w-full h-[550px] rounded"
-                src="https://i.ibb.co/xGzGJVb/pexels-photo-3771505.jpg" alt="Slider-4"
+                src="https://i.ibb.co/Zm6Kkdn/slider4.jpg" alt="Slider-4"
               ></img>
               <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-b from-[#23232301] to-[#ff0099c5] rounded">
               <div className=" absolute bottom-10 left-[15%] text-center w-2/3 mx-auto text-white   ">

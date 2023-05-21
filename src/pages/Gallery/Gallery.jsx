@@ -18,7 +18,7 @@ const Gallery = () => {
           <div>
             <img
               className="w-full h-72 object-cover"
-              src="https://i.ibb.co/NnDvZGJ/pexels-photo-14211426.jpg"
+              src="https://i.ibb.co/sW2hkrD/gallery.jpg"
               alt="toy image"
             />
           </div>

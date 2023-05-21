@@ -14,7 +14,7 @@ const TestomonialVideo = () => {
         <div className="my-14 relative">
           <img
             className="h-96 object-cover w-full rounded-lg"
-            src="https://i.ibb.co/qYp6mnC/pexels-photo-3662844.jpg"
+            src="https://i.ibb.co/xJtjgpV/videothum.jpg"
             alt="kids image"
           />
           <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-b from-[#23232301] to-[#ff0099c5] rounded">

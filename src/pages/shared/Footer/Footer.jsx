@@ -1,4 +1,5 @@
 import React from "react";
+import { FaClock, FaEnvelope, FaHome, FaPhone } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -25,12 +26,13 @@ const Footer = () => {
 
           <div>
             <span className="footer-title opacity-100 text-[#ff0099]">
-              Impotant Links
+              Information
             </span>
-            <Link className="link link-hover">All Toys</Link>
-            <Link className="link link-hover">Blogs</Link>
-            <Link className="link link-hover">Contact</Link>
-            <Link className="link link-hover">About us</Link>
+            <Link className="link link-hover flex items-center gap-2"><FaHome></FaHome> 321/A, New York, USA. </Link>
+            <Link className="link link-hover flex items-center gap-2"><FaPhone></FaPhone> +0125632552 </Link>
+            <Link className="link link-hover flex items-center gap-2"><FaEnvelope></FaEnvelope>contact@ourmail.com</Link>
+            <Link className="link link-hover flex items-center gap-2"><FaClock></FaClock>10:00AM - 5:00PM</Link>
+            
           </div>
           <div>
             <span className="footer-title opacity-100 text-[#ff0099]">
@@ -39,6 +41,7 @@ const Footer = () => {
             <Link className="link link-hover">Terms of use</Link>
             <Link className="link link-hover">Privacy policy</Link>
             <Link className="link link-hover">Cookie policy</Link>
+            <Link className="link link-hover">Contact</Link>
           </div>
           <div>
             <span className="footer-title opacity-100 text-[#ff0099]">
