@@ -17,7 +17,7 @@ const MyToys = () => {
     <>
       <div className="w-10/12 mx-auto">
         <h3 className="uppercase text-2xl text-center my-10 font-bold text-[#ff0099]">My toys</h3>
-        <div className="grid grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 gap-2">
             {
                 toys.map(toy => <MyToysCard
                 key={toy._id}
