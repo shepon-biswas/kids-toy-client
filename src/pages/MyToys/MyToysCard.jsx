@@ -37,6 +37,7 @@ const MyToysCard = ({ toy }) => {
             console.log(data);
             if (data.deletedCount > 0) {
               Swal.fire("Deleted!", "The Toy has been deleted.", "success");
+              window.location.reload();
             }
           });
       }
