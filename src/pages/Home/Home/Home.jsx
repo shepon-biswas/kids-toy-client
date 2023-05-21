@@ -6,8 +6,10 @@ import TestomonialVideo from '../../TestomonialVideo/TestomonialVideo';
 import TestomonialSlider from '../../TestomonialSlider/TestomonialSlider';
 import Brands from '../../shared/Brands/Brands';
 import ShopByAge from '../../ShopByAge/ShopByAge';
+import useTitle from '../../../hooks/useTitle';
 
 const Home = () => {
+    useTitle("Home")
     return (
         <>
             <Slider></Slider>

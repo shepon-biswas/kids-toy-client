@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { FaEye } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import useTitle from "../../hooks/useTitle";
 
 const AllToys = () => {
+  useTitle("All Toys")
     const [searchText ,setSearchText] = useState();
     // const allToys = useLoaderData();
     const [allToys, setAllToys] = useState([])

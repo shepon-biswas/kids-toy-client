@@ -2,8 +2,10 @@ import React from 'react';
 import { FaArrowLeft } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Header from '../shared/Header/Header';
+import useTitle from '../../hooks/useTitle';
 
 const ErrorPage = () => {
+    useTitle("404 Error")
     return (
         <>
             <>
