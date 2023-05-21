@@ -6,7 +6,7 @@ const ShopByCategory = () => {
   const [activeTab, setActiveTab] = useState("math");
 
   useEffect(() => {
-    fetch(`http://localhost:5000/alltoys/${activeTab}`)
+    fetch(`https://learning-using-toys-with-joy-server.vercel.app/alltoys/${activeTab}`)
       .then((res) => res.json())
       .then((data) => {
         setToys(data);

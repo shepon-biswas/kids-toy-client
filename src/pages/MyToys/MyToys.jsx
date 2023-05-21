@@ -7,7 +7,7 @@ const MyToys = () => {
     const [toys, setToys] = useState([]);
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/mytoys/${user?.email}`)
+        fetch(`https://learning-using-toys-with-joy-server.vercel.app/mytoys/${user?.email}`)
         .then(res => res.json())
         .then(data =>{
           const sortedData = data.sort((a, b) => b.price - a.price);
@@ -23,6 +23,8 @@ const MyToys = () => {
                 toys.map(toy => <MyToysCard
                 key={toy._id}
                 toy={toy}
+                toys={toys}
+                setToys={setToys}
                 >
                 </MyToysCard>)
             }

@@ -3,13 +3,14 @@ import { FaEdit, FaTrash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const MyToysCard = ({ toy }) => {
+const MyToysCard = ({ toy, setToys, toys }) => {
   const {
     _id,
     name,
     photo,
     sellerName,
     sellerEmail,
+    subCategory,
     rating,
     quantity,
     price,
@@ -29,7 +30,7 @@ const MyToysCard = ({ toy }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/toy/${_id}`, {
+        fetch(`https://learning-using-toys-with-joy-server.vercel.app/toy/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -37,7 +38,8 @@ const MyToysCard = ({ toy }) => {
             console.log(data);
             if (data.deletedCount > 0) {
               Swal.fire("Deleted!", "The Toy has been deleted.", "success");
-              window.location.reload();
+              const remainingToys = toys.filter(singleToy => singleToy._id !== _id)
+              setToys(remainingToys);
             }
           });
       }
@@ -66,6 +68,10 @@ const MyToysCard = ({ toy }) => {
               <span>
                 <strong>Seller Email: </strong>
                 {sellerEmail}
+              </span>
+              <span>
+                <strong>Sub-Category: </strong>
+                {subCategory}
               </span>
               <span>
                 <strong>Quantity: </strong>

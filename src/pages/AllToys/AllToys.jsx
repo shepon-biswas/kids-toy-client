@@ -8,7 +8,7 @@ const AllToys = () => {
     const [allToys, setAllToys] = useState([])
     // Load all data
     useEffect(() =>{
-      fetch(`http://localhost:5000/alltoys`)
+      fetch(`https://learning-using-toys-with-joy-server.vercel.app/alltoys`)
       .then(res => res.json())
       .then(data =>{
         setAllToys(data)
@@ -17,7 +17,7 @@ const AllToys = () => {
 
     // Handle Search Query
     const handleSearchQuery = ()=>{
-      fetch(`http://localhost:5000/searchToy/${searchText}`)
+      fetch(`https://learning-using-toys-with-joy-server.vercel.app/searchToy/${searchText}`)
       .then(res => res.json())
       .then(data =>{
         setAllToys(data)

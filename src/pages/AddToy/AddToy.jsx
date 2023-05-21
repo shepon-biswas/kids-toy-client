@@ -32,7 +32,7 @@ const AddToy = () => {
     };
     console.log(toys);
     // send to toys data to server
-    fetch(`http://localhost:5000/addtoy`,{
+    fetch(`https://learning-using-toys-with-joy-server.vercel.app/addtoy`,{
       method: "POST",
       headers:{
         "content-type": "application/json"
