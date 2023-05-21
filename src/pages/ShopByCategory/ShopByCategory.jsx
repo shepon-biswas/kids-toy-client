@@ -59,7 +59,7 @@ const ShopByCategory = () => {
           </div>
         </div>
         {/* Tab Wise Toys Data Section */}
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-3 gap-5">
             {
                 toys.map(toy => <CategoryToysCard 
                     key={toy._id}

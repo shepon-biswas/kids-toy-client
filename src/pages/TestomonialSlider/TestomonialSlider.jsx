@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 const TestomonialSlider = () => {
   return (
     <>
-      <div className="w-10/12 mx-auto my-14">
+      <div className=" w-11/12 md:w-10/12 mx-auto my-14">
         <div>
           <h2 className="text-2xl font-bold text-center uppercase text-[#ff0099] ">
             What They Say
@@ -17,6 +17,16 @@ const TestomonialSlider = () => {
           spaceBetween={30}
           pagination={{
             clickable: true,
+          }}
+          breakpoints={{
+            "@0.00": {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            "@0.75": {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            }
           }}
           modules={[Pagination]}
           className="mySwiper"

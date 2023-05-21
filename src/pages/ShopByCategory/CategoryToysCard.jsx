@@ -6,7 +6,7 @@ const CategoryToysCard = ({ toy }) => {
   const {_id, name, photo, price, rating} = toy;
   return (
     <>
-      <div className="card  w-96 bg-base-100 shadow-xl">
+      <div className="card w-full bg-base-100 shadow-xl">
         <figure>
           <img
           className="w-full h-64 object-cover"

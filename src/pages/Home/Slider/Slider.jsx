@@ -39,7 +39,7 @@ const Slider = () => {
               ></img>
               <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-b from-[#23232301] to-[#ff0099c5] rounded">
               <div className=" absolute bottom-10 left-[15%] text-center w-2/3 mx-auto text-white   ">
-                <h4 className="text-4xl font-bold my-3">Play gives children a chance to practice what they are learning.</h4>
+                <h4 className="text-2xl md:text-4xl font-bold my-3">Play gives children a chance to practice what they are learning.</h4>
                 <p className="text-gray-200">-Fred Rogers, TV host and producer</p>
               </div>
               </div>
@@ -54,7 +54,7 @@ const Slider = () => {
               ></img>
               <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-b from-[#23232301] to-[#ff0099c5] rounded">
               <div className=" absolute bottom-10 left-[15%] text-center w-2/3 mx-auto text-white   ">
-                <h4 className="text-4xl font-bold my-3">Children have always learned and created places for themselves through play.</h4>
+                <h4 className="text-2xl md:text-4xl font-bold my-3">Children have always learned and created places for themselves through play.</h4>
                 <p className="text-gray-200">-Donna R. Barnes, professor in education</p>
               </div>
               </div>
@@ -69,7 +69,7 @@ const Slider = () => {
               ></img>
               <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-b from-[#23232301] to-[#ff0099c5] rounded">
               <div className=" absolute bottom-10 left-[15%] text-center w-2/3 mx-auto text-white   ">
-                <h4 className="text-4xl font-bold my-3">When we deny children play, we are denying them the right to understand the world.</h4>
+                <h4 className="text-2xl md:text-4xl font-bold my-3">When we deny children play, we are denying them the right to understand the world.</h4>
                 <p className="text-gray-200">-Erika & Nicholas Christakis, early childhood educator/sociologist and physician</p>
               </div>
               </div>
@@ -84,7 +84,7 @@ const Slider = () => {
               ></img>
               <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-b from-[#23232301] to-[#ff0099c5] rounded">
               <div className=" absolute bottom-10 left-[15%] text-center w-2/3 mx-auto text-white   ">
-                <h4 className="text-4xl font-bold my-3">Children need the freedom and time to play. Play is not a luxury. Play is a necessity.</h4>
+                <h4 className="text-2xl md:text-4xl font-bold my-3">Children need the freedom and time to play. Play is not a luxury. Play is a necessity.</h4>
                 <p className="text-gray-200">-Kay Redfield Jamison, psychologist and writer</p>
               </div>
               </div>

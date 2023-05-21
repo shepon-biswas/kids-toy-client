@@ -4,7 +4,7 @@ import { FaPlayCircle } from "react-icons/fa";
 const TestomonialVideo = () => {
   return (
     <>
-      <div className="w-10/12 mx-auto">
+      <div className=" w-11/12 md:w-10/12 mx-auto">
       <div>
           <h2 className="text-2xl font-bold text-center uppercase text-[#ff0099] ">
             Our video testomonial
@@ -19,7 +19,7 @@ const TestomonialVideo = () => {
           />
           <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-b from-[#23232301] to-[#ff0099c5] rounded">
             <div className=" absolute top-[30%] left-[15%] text-center w-2/3 mx-auto text-white">
-              <h4 className="text-4xl font-bold my-5">
+              <h4 className=" text-xl md:text-4xl font-bold my-5">
                 We make your children happier with the best toys
               </h4>
               <a

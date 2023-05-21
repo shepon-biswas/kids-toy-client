@@ -13,7 +13,7 @@ const Brands = () => {
           </p>
         </div>
         {/* Brand Images */}
-        <div className="grid grid-cols-5 gap-5">
+        <div className="grid grid-cols-3 md:grid-cols-5 gap-5">
             <div className="border border-[#ffcceb] shadow-md rounded-md">
                 <img className=" w-full h-full object-center p-2" src="https://i.ibb.co/h9vT6GQ/logo1-compact-1.webp" alt="brand image" />
             </div>

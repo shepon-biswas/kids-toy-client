@@ -15,7 +15,7 @@ const Header = () => {
   return (
     <>
       <div className="bg-[#FF55BB]">
-        <div className="navbar w-10/12 mx-auto ">
+        <div className="navbar w-full  md:w-10/12 mx-auto ">
           <div className="navbar-start">
             <div className="dropdown">
               <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -39,33 +39,17 @@ const Header = () => {
                 className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
               >
                 <li>
-                  <a>Item 1</a>
-                </li>
-                <li tabIndex={0}>
-                  <a className="justify-between">
-                    Parent
-                    <svg
-                      className="fill-current"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-                    </svg>
-                  </a>
-                  <ul className="p-2">
-                    <li>
-                      <a>Submenu 1</a>
-                    </li>
-                    <li>
-                      <a>Submenu 2</a>
-                    </li>
-                  </ul>
-                </li>
+                <NavLink to={"/"}>Home</NavLink>
+              </li>
                 <li>
-                  <a>Item 3</a>
-                </li>
+                <NavLink to={"/alltoys"}>All Toys</NavLink>
+              </li>
+              <li>
+                <NavLink to={"/contact"}>Contact</NavLink>
+              </li>
+              <li>
+                <NavLink to={"/blogs"}>Blogs</NavLink>
+              </li>
               </ul>
             </div>
             {/* Navbar Start */}
@@ -75,7 +59,7 @@ const Header = () => {
                 src="https://i.ibb.co/hWczT9S/pngtree-kids-logo-image-79551.jpg"
                 alt="logo"
               />
-              <Link className=" text-white text-2xl font-bold">
+              <Link className=" text-white md:text-2xl font-bold">
                 Kids Toys With Education
               </Link>
             </div>
@@ -101,10 +85,10 @@ const Header = () => {
               {
                 user && (
                   <>
-                  <li>
+                  <li className="hidden md:block">
                     <Link to={'/addtoy'}>Add A Toy</Link>
                   </li>
-                  <li>
+                  <li className="hidden md:block">
                     <Link to={'/mytoys'}>My Toys</Link>
                   </li>
                   </>

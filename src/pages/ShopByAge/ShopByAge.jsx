@@ -13,7 +13,7 @@ const ShopByAge = () => {
           </p>
         </div>
         {/* Images Section */}
-        <div className='grid grid-cols-5 gap-4 cursor-pointer'>
+        <div className='grid md:grid-cols-5 gap-4 cursor-pointer'>
             <div>
                 <img className='rounded-full' src="https://i.ibb.co/M56Qzsv/baby5.png" alt="baby image" />
                 <h4 className='text-lg text-[#ff00bb] text-center font-bold mt-2'>For Baby</h4>
